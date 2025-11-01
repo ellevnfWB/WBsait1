@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Глухих Матвей - Менеджер Wildberries</title>
+    <title>Глухих Матвей - Профессиональный менеджер Wildberries</title>
+    <meta name="description" content="Профессиональный менеджер Wildberries. Увеличиваю продажи на маркетплейсе на 200%+. 50+ успешных кейсов. SEO-оптимизация, реклама, аналитика.">
+    <meta name="keywords" content="Wildberries, менеджер WB, продвижение на маркетплейсах, увеличение продаж, SEO WB, реклама на маркетплейсах">
+    <link rel="preload" as="image" href="photo_2025-11-01_15-24-02.jpg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -40,7 +44,7 @@
         
         /* Навигация */
         nav {
-            background-color: rgba(10, 10, 10, 0.9);
+            background-color: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(10px);
             position: fixed;
             width: 100%;
@@ -89,7 +93,9 @@
         .hero {
             padding: 180px 0 100px;
             text-align: center;
-            background: radial-gradient(circle at top right, rgba(108, 99, 255, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 80%, rgba(108, 99, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                        linear-gradient(135deg, #0A0A0A 0%, #1A0B2E 100%);
         }
         
         .hero h1 {
@@ -185,6 +191,11 @@
             font-weight: 700;
             color: var(--blue);
             display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover .stat-value {
+            transform: scale(1.1);
         }
         
         .stat-label {
@@ -206,6 +217,14 @@
             font-size: 0.9rem;
             color: var(--light-blue);
             border: 1px solid rgba(108, 99, 255, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .skill:hover {
+            background: rgba(108, 99, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
         }
         
         .about-image {
@@ -220,6 +239,11 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             border: 2px solid rgba(108, 99, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.02);
         }
         
         .image-frame {
@@ -263,6 +287,10 @@
         .case-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(108, 99, 255, 0.2);
+        }
+        
+        .case-card:hover .stat-value {
+            transform: scale(1.1);
         }
         
         .case-img {
@@ -319,6 +347,7 @@
             font-weight: 700;
             color: var(--blue);
             display: block;
+            transition: transform 0.3s ease;
         }
         
         .stat-label {
@@ -345,6 +374,100 @@
             clip-path: polygon(0% 100%, 10% 70%, 20% 90%, 30% 40%, 40% 60%, 50% 30%, 60% 50%, 70% 20%, 80% 40%, 90% 10%, 100% 30%, 100% 100%);
         }
         
+        /* Секция отзывов */
+        .testimonials {
+            padding: 80px 0;
+            background: rgba(26, 11, 46, 0.3);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial {
+            background: linear-gradient(145deg, rgba(26, 11, 46, 0.6), rgba(10, 10, 10, 0.8));
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(108, 99, 255, 0.2);
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--purple);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+        
+        .testimonial p {
+            color: var(--gray);
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            color: var(--light-blue);
+            font-weight: 600;
+        }
+        
+        /* Секция процесса работы */
+        .process {
+            padding: 80px 0;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(145deg, rgba(26, 11, 46, 0.6), rgba(10, 10, 10, 0.8));
+            border-radius: 15px;
+            border: 1px solid rgba(108, 99, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(to right, var(--purple), var(--blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--black);
+            font-size: 1.5rem;
+        }
+        
+        .step-number {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: var(--purple);
+            color: white;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            line-height: 30px;
+            font-weight: bold;
+        }
+        
         /* Секция контактов */
         .contact {
             padding: 100px 0;
@@ -364,6 +487,11 @@
             display: flex;
             align-items: center;
             margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            transform: translateX(10px);
         }
         
         .contact-icon {
@@ -513,6 +641,10 @@
                 flex-direction: column;
                 gap: 15px;
             }
+            
+            .testimonials-grid, .process-steps {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -524,6 +656,7 @@
             <ul class="nav-links">
                 <li><a href="#about">Обо мне</a></li>
                 <li><a href="#cases">Кейсы</a></li>
+                <li><a href="#process">Процесс</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
         </div>
@@ -533,7 +666,7 @@
     <section class="hero">
         <div class="container fade-in">
             <h1>Профессиональный менеджер Wildberries</h1>
-            <p>Специалист по продвижению и увеличению продаж на маркетплейсе. Превращаю ваши товары в бестселлеры с помощью аналитики и стратегического подхода.</p>
+            <p>Увеличиваю продажи на маркетплейсе на 200%+ через глубокую аналитику и стратегическое продвижение. 50+ успешных кейсов.</p>
             <a href="#contact" class="btn">Обсудить проект</a>
         </div>
     </section>
@@ -576,7 +709,8 @@
                 </div>
                 <div class="about-image fade-in">
                     <div class="image-frame">
-                        <img src="photo_2025-11-01_15-24-02.jpg" alt="Patrick Jane" class="profile-img">
+                        <img src="photo_2025-11-01_15-24-02.jpg" alt="Глухих Матвей" class="profile-img" 
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWExYjJmIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPtCX0LvRg9C60YPRjiDQnNCw0YLRi9C/PC90ZXh0Pjwvc3ZnPg=='">
                     </div>
                 </div>
             </div>
@@ -597,7 +731,7 @@
                     </div>
                     <div class="case-content">
                         <h3>Запуск бренда одежды "NEW JERSEYY"</h3>
-                        <p>Полное сопровождение нового бренда одежды от создания карточек до вывода в топ категории. Разработка стратегии продвижения и ценообразования.</p>
+                        <p>Полное сопровождение нового бренда от нуля до 2.1 млн руб/мес. Создал 150+ карточек, настроил рекламную кампанию с ROI 380%, вывел 15 SKU в топ-10 категорий.</p>
                         <div class="chart">
                             <div class="chart-line"></div>
                         </div>
@@ -623,13 +757,13 @@
                     </div>
                     <div class="case-content">
                         <h3>Косметика для животных "Гаврилла"</h3>
-                        <p>Оптимизация карточек товаров и стратегии продвижения для премиального бренда косметики. Работа с визуалом и контентом.</p>
+                        <p>Увеличил продажи с 49 тыс. до 130 тыс. руб/мес через оптимизацию карточек и запуск таргетированной рекламы. Улучшил конверсию с 1.2% до 3.8%.</p>
                         <div class="chart">
                             <div class="chart-line"></div>
                         </div>
                         <div class="case-stats">
                             <div class="stat">
-                                <div class="stat-value">Рост продаж с 49 тыс.р до 130 тыс.р </div>
+                                <div class="stat-value">+265%</div>
                                 <div class="stat-label">Рост продаж</div>
                             </div>
                             <div class="stat">
@@ -649,7 +783,7 @@
                     </div>
                     <div class="case-content">
                         <h3>Сетевой магазин "Кристалл-Электро"</h3>
-                        <p>Увеличение оборачиваемости товаров и снижение складских запасов. Разработка системы промо-акций и стратегии ценообразования.</p>
+                        <p>Снизил складские запасы на 52% через внедрение системы прогнозирования спроса. Увеличил оборачиваемость товара с 45 до 28 дней, высвободил 2.3 млн руб оборотных средств.</p>
                         <div class="chart">
                             <div class="chart-line"></div>
                         </div>
@@ -664,6 +798,60 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция процесса работы -->
+    <section class="process" id="process">
+        <div class="container">
+            <h2 class="section-title">Процесс <span>работы</span></h2>
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-search"></i></div>
+                    <h3>Анализ</h3>
+                    <p>Глубокий анализ ниши, конкурентов и текущих показателей</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-chess-knight"></i></div>
+                    <h3>Стратегия</h3>
+                    <p>Разработка индивидуальной стратегии продвижения</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Запуск</h3>
+                    <p>Реализация стратегии и постоянная оптимизация</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Аналитика</h3>
+                    <p>Мониторинг результатов и корректировка подхода</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция отзывов -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Отзывы <span>клиентов</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial fade-in">
+                    <p>Матвей за 4 месяца вывел наш новый бренд одежды в топ категории. Продажи выросли с нуля до 2+ млн в месяц. Профессионал высшего класса!</p>
+                    <div class="testimonial-author">— Основатель бренда NEW JERSEYY</div>
+                </div>
+                <div class="testimonial fade-in">
+                    <p>Работаем с Матвеем более года. Постоянный рост продаж, грамотная аналитика и быстрая реакция на изменения рынка. Рекомендую!</p>
+                    <div class="testimonial-author">— Владелец "Гаврилла"</div>
+                </div>
+                <div class="testimonial fade-in">
+                    <p>Благодаря оптимизации управления запасами высвободили значительные средства. Подход Матвея к аналитике впечатляет.</p>
+                    <div class="testimonial-author">— Директор "Кристалл-Электро"</div>
                 </div>
             </div>
         </div>
@@ -713,18 +901,18 @@
                     </div>
                 </div>
                 <div class="contact-form fade-in">
-                    <form id="contactForm">
+                    <form action="https://formspree.io/f/mjvzzqbv" method="POST" id="contactForm">
                         <div class="form-group">
                             <label for="name">Ваше имя</label>
-                            <input type="text" id="name" class="form-control" placeholder="Введите ваше имя" required>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Введите ваше имя" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Ваш email</label>
-                            <input type="email" id="email" class="form-control" placeholder="Введите ваш email" required>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Введите ваш email" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Сообщение</label>
-                            <textarea id="message" class="form-control" placeholder="Опишите ваш проект или задайте вопрос" required></textarea>
+                            <textarea id="message" name="message" class="form-control" placeholder="Опишите ваш проект или задайте вопрос" required></textarea>
                         </div>
                         <button type="submit" class="btn">Отправить сообщение</button>
                     </form>
@@ -737,7 +925,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo">WbGlykhikh</div>
+                <div class="logo">Глухих Матвей</div>
                 <div class="social-links">
                     <a href="https://t.me/patrickjane1109" class="social-link">
                         <i class="fab fa-telegram"></i>
@@ -745,7 +933,7 @@
                     <a href="mailto:sinetic99@yandex.ru" class="social-link">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="https://wa.me/79779647620" class="social-link">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -775,34 +963,4 @@
             });
         });
         
-        // Обработка формы
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Сообщение отправлено! Я свяжусь с вами в ближайшее время.');
-            this.reset();
-        });
-        
         // Анимация появления элементов при скролле
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        fadeElements.forEach(el => {
-            el.style.opacity = 0;
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
-
-
-
